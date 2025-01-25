@@ -1,6 +1,18 @@
 def add_expense(expenses, amount, category):
     expenses.append({'amount': amount, 'category': category})
 
+def print_expenses(expenses):
+    for expense in expenses:
+        print(f'Amount: {expense['amount']}, Category: {expense['category']}')
+
+# This function needs completion:
+def expense_filter():
+    pass
+
+# This function needs completion:
+def total_expenses():
+    pass
+
 def main():
     expenses = []
     while True:
@@ -13,12 +25,16 @@ def main():
         user_choice = input('Make Selection: ')
 
         if user_choice == '1':
-            pass
+            amount = float(input('Enter Amount: '))
+            category = input('Enter Category: ')
+            add_expense(expenses, amount, category)
         elif user_choice == '2':
-            pass
+            print_expenses(expenses)
         elif user_choice == '3':
             pass
         elif user_choice == '4':
             pass
         elif user_choice == '5':
-            pass
+            break
+
+main()
