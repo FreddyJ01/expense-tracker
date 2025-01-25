@@ -1,2 +1,2 @@
 def add_expense(expenses, amount, category):
-    pass
+    expenses.append({'amount': amount, 'category': category})
