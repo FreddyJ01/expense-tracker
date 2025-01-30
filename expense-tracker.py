@@ -2,12 +2,15 @@ def add_expense(expenses, amount, category):
     expenses.append({'amount': amount, 'category': category})
 
 def print_expenses(expenses):
+    print()
     for expense in expenses:
         print(f'Amount: {expense['amount']}, Category: {expense['category']}')
 
 # This function needs completion:
-def expense_filter():
-    pass
+def expense_filter(expenses, user_category):
+    for expense in expenses:
+        if expense['category'] == user_category:
+            print(f'Amount: {expense['amount']}, Category: {expense['category']}')
 
 # This function needs completion:
 def total_expenses():
@@ -31,7 +34,8 @@ def main():
         elif user_choice == '2':
             print_expenses(expenses)
         elif user_choice == '3':
-            pass
+            user_category = input('Enter a Catgegory: ')
+            expense_filter(expenses, user_category)
         elif user_choice == '4':
             pass
         elif user_choice == '5':
